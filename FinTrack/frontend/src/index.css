@@ -1,0 +1,144 @@
+body, html{
+  /* background:linear-gradient(to left, green, white); */
+  background: rgb(56, 53, 53);
+  background-image: url(assets/background2.jpeg);
+  background-repeat: no-repeat;
+  /*Ensures background covers entire element by maintaining proportions*/
+  background-attachment: fixed;
+  /*Ensures background covers full element even without maintaining proportions which is what we want*/
+  background-size: 100% 100%;
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  color:white;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.page-header{
+  opacity: 0.85;
+  font-family: 'Raleway', sans-serif;
+  background: rgb(25, 26, 27);
+  color: lightgreen;
+}
+
+.form-container{
+  display:flex;
+  margin: 10vh auto 20px auto ;
+  justify-content:center;
+  width:100%;
+}
+
+.form-box{
+  width:350px;
+  height:450px;
+  background-color:#2c457c;
+  background-image:linear-gradient(90deg, #182c3b, #223a6e);
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  opacity:0.95;
+  border-radius:2%;
+}
+
+.header-form{
+  margin-bottom:15px;
+}
+
+#menu {
+  background: rgb(25, 26, 27);
+  opacity: 0.9;
+}
+
+#watchlist-form-div {
+  background: #0b1b3d;
+  max-width: 60vw;
+}
+
+#watchlists {
+  background: linear-gradient(90deg, #200f8f, #130b44);
+  /* max-width: 90vw; */
+}
+
+.watchlist {
+  background: linear-gradient(90deg, #0b1b3d, #0b131a);
+}
+
+.watchlist-content {
+  background: linear-gradient(90deg, rgb(25, 26, 27), #0b131a);
+}
+
+.copiedLinkSuccess {
+  color: rgb(105, 221, 215);
+}
+
+form > button{
+  margin-top:40px;
+  margin-bottom:10px;
+}
+
+.tickertape-icon {
+  background: url('assets/tickertape-fi-cropped.jpg');
+  background-size: contain;
+  height: 40px;
+  width: 40px;
+  display: block;
+}
+
+#search-bar {
+  max-width: 80vw;
+}
+
+#search-results {
+  max-width: 80vw;
+  background: linear-gradient(90deg, #200f8f, #130b44);
+}
+
+#search-results-header {
+  background: rgb(37, 36, 36);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.notification {
+  color: black;
+  font-size: 20px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.success {
+  background: lightgreen;
+}
+
+.error {
+  background: rgb(230, 69, 69);
+}
+
+.regular-shadow {
+	-webkit-box-shadow: -1px 5px 5px 0px #111;
+	box-shadow: -1px 5px 5px 0px #111;
+}
+
+.regular-text-shadow {
+	text-shadow: 1px 1px 0 rgb(93, 95, 97);
+}
+
+.no-border {
+  border: 0;
+  box-shadow: none;
+}
+
+footer {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  opacity: 0.95;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: black;
+}

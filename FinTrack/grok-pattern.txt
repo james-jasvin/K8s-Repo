@@ -1,0 +1,3 @@
+DATESTAMP_RFC1123 %{DAY}, %{MONTHDAY} %{MONTH} %{YEAR} %{TIME} GMT
+%{DATESTAMP_RFC1123:timestamp} %{WORD:http_request} %{URIPATHPARAM:path} %{BASE10NUM:status_code} %{DATA:content_length} - %{BASE16FLOAT:response_time} ms %{GREEDYDATA:request_data}
+%{DAY:day}, %{MONTHDAY:monthday} %{MONTH:month} %{YEAR:year} %{TIME:time} GMT %{WORD:http_request} %{URIPATHPARAM:path} %{BASE10NUM:status_code} %{DATA:content_length} - %{BASE16FLOAT:response_time} ms %{GREEDYDATA:request_data}

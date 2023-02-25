@@ -1,0 +1,5 @@
+Fri, 29 Apr 2022 05:44:31 GMT GET /api/instruments 304 - - 44.387 ms {}
+Fri, 29 Apr 2022 05:44:31 GMT GET /api/watchlists?user=61f0f9ee4e819f6d7d088344 304 - - 58.830 ms {}
+Fri, 29 Apr 2022 05:44:31 GMT GET /api/watchlistInstruments?watchlistId=6262c2b966def321c8aa20bc 304 - - 86.985 ms {}
+Fri, 29 Apr 2022 05:44:31 GMT GET /api/watchlistInstruments?watchlistId=626633035d09237ccca61a65 304 - - 85.169 ms {}
+Fri, 29 Apr 2022 05:44:31 GMT GET /api/watchlistInstruments?watchlistId=6264e35a28dc5a1f23c6a45c 304 - - 94.320 ms {}

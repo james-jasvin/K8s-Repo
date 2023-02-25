@@ -1,0 +1,43 @@
+# Multi-Port Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongodb-service
+spec:
+  selector:
+    app: mongodb
+  ports:
+  - name: mongodb
+    port: 3200
+    targetPort: 3000
+  - name: mongodb-exporter
+    port: 9216
+    targetPort: 9216
+---
+# NodePort Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: ms-service-nodeport
+spec:
+  type: NodePort
+  selector:
+    app: microservice-one
+  ports:
+  - port: 3200
+    targetPort: 3000
+    nodePort: 30008
+---
+# LoadBalancer Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: ms-service-loadbalancer
+spec:
+  type: LoadBalancer
+  selector:
+    app: microservice-one
+  ports:
+  - port: 3200
+    targetPort: 3000
+    nodePort: 30010

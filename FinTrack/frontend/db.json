@@ -1,0 +1,152 @@
+{
+  "users": [
+    {
+      "id": "61f0418cfe24a23454d47500",
+      "username": "User",
+      "name": "User",
+      "passwordHash": "$2b$10$IsQ8njpWAq0GqMs9fFK2ZO9bNAP4OK/h08wqwnRKp.5omqx6xHEEK"
+    }
+  ],
+  "instruments": [
+    {
+      "id": "1",
+      "symbol": "TCS",
+      "name": "Tata Consultancy Services",
+      "isMF": false,
+      "url": "https://www.tickertape.in/stocks/tata-consultancy-services-TCS?"
+    },
+    {
+      "id": "2",
+      "symbol": "INFY",
+      "name": "Infosys",
+      "isMF": false,
+      "url": "https://www.tickertape.in/stocks/infosys-INFY?"
+    },
+    {
+      "id": "3",
+      "symbol": "M_AXLB",
+      "name": "Axis Bluechip Fund",
+      "isMF": true,
+      "url": "https://www.tickertape.in/mutualfunds/axis-bluechip-fund-M_AXLB"
+    },
+    {
+      "id": "4",
+      "symbol": "SBIN",
+      "name": "State Bank of India",
+      "isMF": false,
+      "url": "https://www.tickertape.in/stocks/state-bank-of-india-SBI?"
+    },
+    {
+      "id": "5",
+      "symbol": "LT",
+      "name": "Larsen & Toubro Ltd",
+      "isMF": false,
+      "url": "https://www.tickertape.in/stocks/larsen-and-toubro-LART?"
+    },
+    {
+      "id": "6",
+      "symbol": "M_TADL",
+      "name": "Tata Digital India Fund - Growth",
+      "isMF": true,
+      "url": "https://www.tickertape.in/mutualfunds/tata-digital-india-fund-M_TADL?"
+    },
+    {
+      "id": "7",
+      "symbol": "M_PARO",
+      "name": "Parag Parikh Flexi Cap Fund - Growth",
+      "isMF": true,
+      "url": "https://www.tickertape.in/mutualfunds/parag-parikh-flexi-cap-fund-M_PARO?"
+    }
+  ],
+  "watchlists": [
+    {
+      "id": "1",
+      "name": "IT Stocks",
+      "user": "61f0418cfe24a23454d47500",
+      "isMF": false
+    },
+    {
+      "id": "2",
+      "name": "MF Watcher",
+      "user": "61f0418cfe24a23454d47500",
+      "isMF": true
+    },
+    {
+      "name": "New MFs",
+      "isMF": true,
+      "user": "61f0418cfe24a23454d47500",
+      "id": "S8nNrud"
+    },
+    {
+      "name": "YAWL",
+      "isMF": false,
+      "user": "61f0418cfe24a23454d47500",
+      "id": "J9QmlNd"
+    }
+  ],
+  "watchlistInstruments": [
+    {
+      "symbol": "M_AXLB",
+      "name": "Axis Bluechip Fund",
+      "isMF": true,
+      "url": "https://www.tickertape.in/mutualfunds/axis-bluechip-fund-M_AXLB",
+      "instrumentId": "3",
+      "watchlistId": "2",
+      "id": "dJUWiyE"
+    },
+    {
+      "symbol": "INFY",
+      "name": "Infosys",
+      "isMF": false,
+      "url": "https://www.tickertape.in/stocks/infosys-INFY?",
+      "instrumentId": "2",
+      "watchlistId": "1",
+      "id": "XQrdip8"
+    },
+    {
+      "symbol": "TCS",
+      "name": "Tata Consultancy Services",
+      "isMF": false,
+      "url": "https://www.tickertape.in/stocks/tata-consultancy-services-TCS?",
+      "instrumentId": "1",
+      "watchlistId": "1",
+      "id": "9EHcPaU"
+    },
+    {
+      "symbol": "M_AXLB",
+      "name": "Axis Bluechip Fund",
+      "isMF": true,
+      "url": "https://www.tickertape.in/mutualfunds/axis-bluechip-fund-M_AXLB",
+      "instrumentId": "3",
+      "watchlistId": "S8nNrud",
+      "id": "o2AShT8"
+    },
+    {
+      "symbol": "M_TADL",
+      "name": "Tata Digital India Fund - Growth",
+      "isMF": true,
+      "url": "https://www.tickertape.in/mutualfunds/tata-digital-india-fund-M_TADL?",
+      "instrumentId": "6",
+      "watchlistId": "2",
+      "id": "NrlZais"
+    },
+    {
+      "symbol": "M_PARO",
+      "name": "Parag Parikh Flexi Cap Fund - Growth",
+      "isMF": true,
+      "url": "https://www.tickertape.in/mutualfunds/parag-parikh-flexi-cap-fund-M_PARO?",
+      "instrumentId": "7",
+      "watchlistId": "2",
+      "id": "Y3CK3W5"
+    },
+    {
+      "symbol": "M_PARO",
+      "name": "Parag Parikh Flexi Cap Fund - Growth",
+      "isMF": true,
+      "url": "https://www.tickertape.in/mutualfunds/parag-parikh-flexi-cap-fund-M_PARO?",
+      "instrumentId": "7",
+      "watchlistId": "S8nNrud",
+      "id": "uPYtFi4"
+    }
+  ]
+}

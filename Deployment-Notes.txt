@@ -1,0 +1,19 @@
+minikube start
+
+Create Fintrack namespace - kubectl create ns fintrack
+
+Set active K8s namespace to fintrack,  kubectl config set-context --current --namespace=fintrack
+
+Create backend K8s Secret - kubectl apply -f fintrack-backend-secret.yaml
+
+Create backend K8s Deployment + Service - kubectl apply -f fintrack-backend.yaml [Ensure that Docker image is latest]
+[Pray that everything starts up properly]
+
+Create frontend K8s Deployment + Service (LoadBalancer) - kubectl apply -f fintrack-frontend.yaml[Ensure that Docker image is latest]
+
+Run the following command in another terminal window, minikube tunnel
+[Reasoning for using this, https://stackoverflow.com/questions/44110876/kubernetes-service-external-ip-pending]
+
+[ Pray that frontend can fire requests to the backend, most likely this will fail :( ]
+
+You need to setup Ingress for this to work it seems. TOOD LATER ^_^

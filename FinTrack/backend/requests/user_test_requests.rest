@@ -1,0 +1,74 @@
+GET http://localhost:3001/api/users
+
+###
+POST http://localhost:3001/api/users
+content-type: application/json
+
+{
+    "username": "User", "name": "User", "password": "123456"
+}
+
+###
+POST http://localhost:3001/api/users
+content-type: application/json
+
+{
+    "username": "Sal", "name": "Sal Vulcano", "password": "123456"
+}
+
+###
+POST http://localhost:3001/api/login
+content-type: application/json
+{
+    "username": "User", "password": "123456"
+}
+
+###
+GET http://localhost:3001/api/watchlists/3
+
+###
+GET http://localhost:3001/api/instruments/
+
+###
+POST http://localhost:3001/api/watchlists/
+content-type: application/json
+
+{
+    "name": "testingPurpose", "isMF": false, "user": "62627adc938c975d9ba9576b"
+}
+
+
+###
+ // GET http://localhost:3001/api/watchlists?user=61f0f9ee4e819f6d7d088344
+ GET http://localhost:3001/api/watchlists?user=62627adc938c975d9ba9576b
+
+###
+ DELETE http://localhost:3001/api/watchlists/6262dadc66def321c8aa20de
+
+
+###
+ GET http://localhost:3001/api/watchlists/6262d9ae66def321c8aa20cb
+
+
+###
+POST http://localhost:3001/api/watchlistInstruments/
+content-type: application/json
+
+{
+    "watchlistId": "6262d9ae66def321c8aa20cb", "instrumentId": "62628dbf7bd49b46c5468775"
+}
+
+# {
+#     "watchlistId": "6262d9ae66def321c8aa20cb", "instrumentId": "62628c7d66b9ee7f9ac3e1d6"  
+# }
+
+###
+GET http://localhost:3001/api/watchlistInstruments?watchlistId=6262d9ae66def321c8aa20cb
+
+
+###
+DELETE http://localhost:3001/api/watchlistInstruments/62642b3664ef9ca88f91709c
+
+
+###
+DELETE http://localhost:3001/api/watchlistInstruments?watchlistId=6262d9ae66def321c8aa20cb

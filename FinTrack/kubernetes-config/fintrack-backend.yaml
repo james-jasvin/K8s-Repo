@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fintrack-backend-deployment
+  namespace: fintrack
+spec:
+  selector:
+    matchLabels:
+      app: fintrack
+      tier: backend
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: fintrack
+        tier: backend
+    spec:
+      containers:
+      - name: fintrack-backend
+        image: jasvinjames/fintrack-backend-k8s
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - name: http
+          containerPort: 3001
+        env:
+        - name: PORT
+          valueFrom:
+            secretKeyRef:
+              name: fintrack-backend-secret
+              key: backend-port
+        - name: MONGODB_URI
+          valueFrom:
+            secretKeyRef:
+              name: fintrack-backend-secret
+              key: mongodb-uri
+        - name: SECRET
+          valueFrom:
+            secretKeyRef:
+              name: fintrack-backend-secret
+              key: backend-secret-key
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: fintrack-backend-service
+spec:
+  selector:
+    app: fintrack
+    tier: backend
+  ports:
+  - port: 3001
+    targetPort: 3001

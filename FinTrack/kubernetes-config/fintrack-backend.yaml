@@ -6,14 +6,12 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: fintrack
-      tier: backend
-  replicas: 3
+      app: fintrack-backend
+  replicas: 1
   template:
     metadata:
       labels:
-        app: fintrack
-        tier: backend
+        app: fintrack-backend
     spec:
       containers:
       - name: fintrack-backend
@@ -25,22 +23,9 @@ spec:
         ports:
         - name: http
           containerPort: 3001
-        env:
-        - name: PORT
-          valueFrom:
-            secretKeyRef:
-              name: fintrack-backend-secret
-              key: backend-port
-        - name: MONGODB_URI
-          valueFrom:
-            secretKeyRef:
-              name: fintrack-backend-secret
-              key: mongodb-uri
-        - name: SECRET
-          valueFrom:
-            secretKeyRef:
-              name: fintrack-backend-secret
-              key: backend-secret-key
+        envFrom:
+        - secretRef:
+            name: fintrack-backend-secret
 ---
 apiVersion: v1
 kind: Service
@@ -48,8 +33,8 @@ metadata:
   name: fintrack-backend-service
 spec:
   selector:
-    app: fintrack
-    tier: backend
+    app: fintrack-backend
   ports:
-  - port: 3001
+  - name: http
+    port: 3001
     targetPort: 3001

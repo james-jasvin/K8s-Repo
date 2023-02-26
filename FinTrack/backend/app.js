@@ -52,12 +52,16 @@ app.use(express.json())
 * In the development environment we want the logs to be printed to the console
 * And the second app.use(morgan()) call does exactly that
 */
-if (process.env.NODE_ENV === 'production')
-	app.use(morgan(':date[web] :method :url :status :res[content-length] - :response-time ms :data', {
-		stream: fs.createWriteStream('./logs/access.log', {flags: 'a'})
-	}))
-else if (process.env.NODE_ENV === 'development')
-	app.use(morgan(':date[web] :method :url :status :res[content-length] - :response-time ms :data'))
+
+/* Currently commented because haven't tried out K8s Volume */
+// if (process.env.NODE_ENV === 'production')
+// 	app.use(morgan(':date[web] :method :url :status :res[content-length] - :response-time ms :data', {
+// 		stream: fs.createWriteStream('./logs/access.log', {flags: 'a'})
+// 	}))
+// else if (process.env.NODE_ENV === 'development')
+
+// Just write API logs to the terminal for now
+app.use(morgan(':date[web] :method :url :status :res[content-length] - :response-time ms :data'))
 
 app.use(middleware.tokenExtractor)
 

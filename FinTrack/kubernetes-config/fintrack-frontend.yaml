@@ -6,17 +6,15 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: fintrack
-      tier: frontend
+      app: fintrack-frontend
   template:
     metadata:
       labels:
-        app: fintrack
-        tier: frontend
+        app: fintrack-frontend
     spec:
       containers:
       - name: fintrack-frontend
-        image: jasvinjames/fintrack-frontend
+        image: jasvinjames/fintrack-frontend-k8s
         # resources:
         #   limits:
         #     memory: "128Mi"
@@ -31,10 +29,10 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: fintrack
-    tier: frontend
+    app: fintrack-frontend
   ports:
-  - port: 3000
+  - name: http
+    port: 3000
     targetPort: 3000
     nodePort: 30000
     

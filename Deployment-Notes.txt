@@ -16,4 +16,16 @@ Run the following command in another terminal window, minikube tunnel
 
 [ Pray that frontend can fire requests to the backend, most likely this will fail :( ]
 
-You need to setup Ingress for this to work it seems. TOOD LATER ^_^
+You need to setup Ingress for this to work
+
+Set up the Ingress file as written and apply it - kubectl apply -f fintrack-ingress.yaml
+
+Wait till Ingress is assigned an IP address,
+kubectl get ingress (note down IP address)
+
+Note: You need to update the file /etc/hosts at the end with the syntax,
+<IP Address of Ingress> <domain name specified in Ingress>
+In my case it looks like, 192.168.49.2	fintrack.com
+
+Also you need to update the API URL that the frontend hits to, fintrack.com/api instead of whatever it was before
+And Ingress will take care of rerouting everything

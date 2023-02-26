@@ -3,6 +3,7 @@ require('dotenv').config()
 let env = null
 
 /*
+* OLD ORIGINAL CONFIG
 * If production environment then use the env.yaml file (generated via Ansible Vault + Playbook)
 * for the environment variables.
 * If testing environment then use the env-enc.yaml file (which will be decrypted in the Jenkins pipeline).
@@ -17,6 +18,9 @@ let env = null
 // else
 // 	env = yenv('env-local.yaml')
 
+/*
+NEW CONFIG FOR K8s DEPLOYMENT
+*/
 env = process.env
 
 const PORT = env.PORT

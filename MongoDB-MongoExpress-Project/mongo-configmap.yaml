@@ -1,6 +1,15 @@
 apiVersion: v1
 kind: ConfigMap
+# Type of K8s Object to create = ConfigMap
 metadata:
   name: mongo-configmap
+  # Name of the ConfigMap object, to be used in the Deployment
 data:
+# The data field consists of key-value pairs that will represent your
+# environment variables
+# In this case, a variable with the name "database-url" is created
+# with the value "mongodb-service" and note that this is actually the name
+# of the MongoDB Service K8s Object, so internally K8s will map this name
+# to the ClusterIP Address of the MongoDB Service
   database-url: mongodb-service
+  

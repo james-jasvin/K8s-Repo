@@ -21,6 +21,9 @@ spec:
         #     cpu: "500m"
         ports:
         - containerPort: 3000
+        # envFrom:
+        # - configMapRef:
+        #     name: fintrack-frontend-configmap
 ---
 apiVersion: v1
 kind: Service

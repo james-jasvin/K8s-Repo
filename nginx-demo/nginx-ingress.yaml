@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx-ingress
+  labels:
+    name: nginx-ingress
+spec:
+  rules:
+  # Consists of routing rules to define which domain name should route to which 
+  # internal service
+  - host: myapp.com
+  # This rule maps the domain name myapp.com to the nginx-service at port number 80
+    http:
+    # Protocol used for forwarding the request from Ingress to the internal service
+      paths:
+      # paths = Anything after domain name
+      - pathType: Prefix
+        path: "/"
+        # Prefix = "/" refers to, http://myapp.com/
+        # Note: For this to be https we'll have to configure a TLS certificate
+        backend:
+        # backend contains the info on the associated backend of the specified path
+          service:
+            name: nginx-service
+            port: 
+              number: 80

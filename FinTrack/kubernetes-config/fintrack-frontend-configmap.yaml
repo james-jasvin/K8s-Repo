@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fintrack-frontend-configmap
+data:
+  REACT_APP_FRONTEND_URL: fintrack-frontend-service
+  REACT_APP_BACKEND_URL: fintrack-backend-service

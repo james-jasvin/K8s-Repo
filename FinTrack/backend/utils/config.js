@@ -1,5 +1,5 @@
 // const yenv = require('yenv')
-require('dotenv').config()
+// require('dotenv').config()
 let env = null
 
 /*

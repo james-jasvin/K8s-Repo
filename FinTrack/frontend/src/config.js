@@ -9,7 +9,10 @@
     "local-start": "REACT_APP_STAGE=local npm start",
 */
 
-const BACKEND_URL = process.env.REACT_APP_STAGE === 'local'? 'http://localhost:3001': process.env.REACT_APP_BACKEND_URL
-const FRONTEND_URL = process.env.REACT_APP_STAGE === 'local'? 'http://localhost:3000': process.env.REACT_APP_FRONTEND_URL
+// const BACKEND_URL = process.env.REACT_APP_STAGE === 'local'? 'http://localhost:3001': process.env.REACT_APP_BACKEND_URL
+// const FRONTEND_URL = process.env.REACT_APP_STAGE === 'local'? 'http://localhost:3000': process.env.REACT_APP_FRONTEND_URL
+
+const BACKEND_URL = `${process.env.REACT_APP_BACKEND_URL}`
+const FRONTEND_URL = `${process.env.REACT_APP_FRONTEND_URL}`
 
 export {  BACKEND_URL, FRONTEND_URL }

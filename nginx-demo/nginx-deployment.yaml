@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+# The apiVersion field is used to specify the version of the Kubernetes API that should be used
+kind: Deployment
+# Type of component you are deploying
+metadata:
+  name: nginx-deployment
+  # Name of the Deployment created
+  labels:
+  # Selector Labels: Used to match the Deployment with its ReplicaSet
+  # These labels are key-value pairs that can include any key and any value
+    app: nginx
+spec:
+# Specification for the Deployment
+  replicas: 3
+  # Number of Replicas to create
+  selector:
+    # To link the Deployment to its Pods, you specify which labels a particular Pod
+    # must have to be linked with this Deployment
+    matchLabels:
+      app: nginx
+  template: 
+  # Template for the Pod
+    metadata:
+      labels:
+      # Must be the same as the Deployment's labels
+      # This is how Pods are linked with the Deployment
+        app: nginx
+    spec:
+    # Specification for the Pod
+      containers:
+      - name: nginx
+        # Name of the container, custom-name
+        image: nginx:1.16
+        # Which image this container uses
+        ports:
+        - containerPort: 80
+        # On which port this container runs

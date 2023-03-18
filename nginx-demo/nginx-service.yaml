@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+# Type of K8s Object created = Service
+metadata:
+  name: nginx-service
+  # Name of the Service created
+spec:
+  # No type specified in spec, so service will be ClusterIP
+  selector:
+    app: nginx
+    # Selector labels for the Service, must match with the Deployment that it'll connect to
+  ports:
+  - protocol: TCP # Default value TCP
+    port: 80
+    # Port on which this Service will be accessible
+    targetPort: 80
+    # Port where this Service should redirect to
+    # Should match with the Port where the Pods are running
+
